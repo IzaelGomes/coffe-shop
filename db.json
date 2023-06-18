@@ -1,0 +1,9 @@
+{
+  "coffe": [
+    { "id": 1, "title": "jExpresso Tradicional", "description": "O tradicional café feito com água quente e grãos moídos" },
+    { "id": 1, "title": "jExpresso Tradicional", "description": "O tradicional café feito com água quente e grãos moídos" }
+  ],
+  "types": [
+    { "id": 1, "title": "Tradicional", "coffeId": 1 }
+  ]
+}
