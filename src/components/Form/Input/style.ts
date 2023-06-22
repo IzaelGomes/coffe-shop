@@ -10,7 +10,7 @@ export const FormInput = styled.div<{$width:string}>`
         border-radius: 0.25rem;
         outline: none;
         border: 1px solid ${props => props.theme["base-button"]};
-        width:${props =>  props.$width}  ;
+        width:${props =>  props.$width};
 
         &::placeholder{
             font-family: Roboto, sans-serif;

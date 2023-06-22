@@ -1,8 +1,9 @@
-import { Bank, CreditCard, CurrencyDollar, MapPinLine, Money } from '@phosphor-icons/react'
+import { Bank, CreditCard, CurrencyDollar, MapPinLine, Money, Trash } from '@phosphor-icons/react'
 import { Header } from '../../components/Header'
 import { AddressForm, Cart, FormContainer, FormTitle, InforBox, OrderWrapper, PaymentTypes, Title } from './style'
 import { Input } from '../../components/Form/Input/Input'
 import { Button } from '../../components/Buttons/Button'
+import coffe from "../../assets/cofee.svg"
 
 const Order = () => {
 
@@ -31,15 +32,21 @@ const Order = () => {
                         </FormTitle>
 
                         <form>
-                          <FormContainer>
+                        
                               <Input type="number" placeholder="CEP" name="cep" width={"10.7rem"}/>
-                              <Input type="text" placeholder="Rua" name="cep" width={"33.2rem"}/>
+                              <Input type="text" placeholder="Rua" name="cep" width={"33rem"}/>
+                              <div>
                               <Input type="number" placeholder="Número" name="cep" width={"10.7rem"}/>
                               <Input type="text" placeholder="Complemento" name="cep" width={"21.75rem"}/>
-                              <Input type="text" placeholder="Bairro" name="cep" width={"10.7rem"}/>
+                              </div>
+                             
+                             <div>
+                             <Input type="text" placeholder="Bairro" name="cep" width={"10.7rem"}/>
                               <Input type="text" placeholder="Cidade" name="cep" width={"17rem"}/>
-                              <Input type="text" placeholder="UF" name="cep" width={"2.80rem"}/>
-                          </FormContainer>
+                              <Input type="text" placeholder="UF" name="cep" width={"41px"}/>
+                             </div>
+                             
+                        
                         </form>
                     </AddressForm>
                 </div>
@@ -69,7 +76,60 @@ const Order = () => {
 
             <Cart>
                 <h2>Cafés selecionados</h2>
-                <div>
+                <div className='cart-box'>
+                  <div className='cart-item'>
+                    <div className='cart-infor'>
+                        <img src={coffe} alt="" />
+                        <div className='item-infor'>
+                            <h3>Expresso Tradicional</h3>
+                            <div className='buttons'>
+                              <div className='buttonControls'>
+                                  <button>-</button>
+                                  <span>2</span>
+                                  <button>+</button>  
+                              </div>
+                              <button className='remove-item-button'><Trash size={20} fill='#8047F8'/> <span>Remover</span></button>
+                            </div> 
+                        </div>
+                        <span>9,90</span>
+                    </div>
+                  </div>
+
+                  <div className='cart-item'>
+                    <div className='cart-infor'>
+                        <img src={coffe} alt="" />
+                        <div className='item-infor'>
+                            <h3>Expresso Tradicional</h3>
+                            <div className='buttons'>
+                              <div className='buttonControls'>
+                                  <button>-</button>
+                                  <span>2</span>
+                                  <button>+</button>  
+                              </div>
+                              <button className='remove-item-button'><Trash size={20} fill='#8047F8'/> <span>Remover</span></button>
+                            </div> 
+                        </div>
+                        <span>9,90</span>
+                    </div>
+                  </div>
+
+                  <div className='cart-item'>
+                    <div className='cart-infor'>
+                        <img src={coffe} alt="" />
+                        <div className='item-infor'>
+                            <h3>Expresso Tradicional</h3>
+                            <div className='buttons'>
+                              <div className='buttonControls'>
+                                  <button>-</button>
+                                  <span>2</span>
+                                  <button>+</button>  
+                              </div>
+                              <button className='remove-item-button'><Trash size={20} fill='#8047F8'/> <span>Remover</span></button>
+                            </div> 
+                        </div>
+                        <span>9,90</span>
+                    </div>
+                  </div>
                 </div>
             </Cart>
 

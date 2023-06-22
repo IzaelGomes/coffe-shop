@@ -68,7 +68,8 @@ export const ButtonControls =styled.div`
     justify-content: space-between;
     padding: 0.5rem;
     border-radius: 6px;
-  
+    
+
 
     button{
       cursor: pointer;
