@@ -3,7 +3,8 @@ import { Header } from '../../components/Header'
 import { AddressForm, Cart, FormContainer, FormTitle, InforBox, OrderWrapper, PaymentTypes, Title } from './style'
 import { Input } from '../../components/Form/Input/Input'
 import { Button } from '../../components/Buttons/Button'
-import coffe from "../../assets/cofee.svg"
+import { CartItem } from '../../components/Cart-Item/CartItem'
+
 
 const Order = () => {
 
@@ -77,59 +78,9 @@ const Order = () => {
             <Cart>
                 <h2>Cafés selecionados</h2>
                 <div className='cart-box'>
-                  <div className='cart-item'>
-                    <div className='cart-infor'>
-                        <img src={coffe} alt="" />
-                        <div className='item-infor'>
-                            <h3>Expresso Tradicional</h3>
-                            <div className='buttons'>
-                              <div className='buttonControls'>
-                                  <button>-</button>
-                                  <span>2</span>
-                                  <button>+</button>  
-                              </div>
-                              <button className='remove-item-button'><Trash size={20} fill='#8047F8'/> <span>Remover</span></button>
-                            </div> 
-                        </div>
-                        <span>9,90</span>
-                    </div>
-                  </div>
-
-                  <div className='cart-item'>
-                    <div className='cart-infor'>
-                        <img src={coffe} alt="" />
-                        <div className='item-infor'>
-                            <h3>Expresso Tradicional</h3>
-                            <div className='buttons'>
-                              <div className='buttonControls'>
-                                  <button>-</button>
-                                  <span>2</span>
-                                  <button>+</button>  
-                              </div>
-                              <button className='remove-item-button'><Trash size={20} fill='#8047F8'/> <span>Remover</span></button>
-                            </div> 
-                        </div>
-                        <span>9,90</span>
-                    </div>
-                  </div>
-
-                  <div className='cart-item'>
-                    <div className='cart-infor'>
-                        <img src={coffe} alt="" />
-                        <div className='item-infor'>
-                            <h3>Expresso Tradicional</h3>
-                            <div className='buttons'>
-                              <div className='buttonControls'>
-                                  <button>-</button>
-                                  <span>2</span>
-                                  <button>+</button>  
-                              </div>
-                              <button className='remove-item-button'><Trash size={20} fill='#8047F8'/> <span>Remover</span></button>
-                            </div> 
-                        </div>
-                        <span>9,90</span>
-                    </div>
-                  </div>
+                  <CartItem/>
+                  <CartItem/>
+                  <CartItem/>
                 </div>
             </Cart>
 
