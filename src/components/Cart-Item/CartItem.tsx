@@ -15,7 +15,7 @@ interface ICartItemProps {
 const CartItem = ({ title, quantity, price, id }: ICartItemProps) => {
   const totalPrice = price * quantity;
   const [quantityCoffeUpdated, setQuantityCoffeUpdated] = useState(0);
-  const {addMoreCoffe, removerCoffe} = useContext(CartContext)
+  const {addMoreCoffe} = useContext(CartContext)
 
   async function addMoreCoffeonCart(id: number) {
 
@@ -54,7 +54,7 @@ const CartItem = ({ title, quantity, price, id }: ICartItemProps) => {
             <h3>{title}</h3>
             <div className="buttons">
               <div className="buttonControls">
-                <button onClick={() => removerCoffe(id, "coffeCart")}>-</button>
+                <button onClick={() => removerCoffeOnCart(id)}>-</button>
                 <span>{quantity}</span>
                 <button onClick={() => addMoreCoffe(id, "coffeCart")}>+</button>
               </div>

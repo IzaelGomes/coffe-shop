@@ -12,7 +12,7 @@ const Header = () => {
 
         <InforHeader>
           <div>
-            <MapPin color="#4B2995" fill="#4B2995" size={32} />
+            <MapPin color="#4B2995" fill="#4B2995" weight="fill"  size={32} />
             <span>Porto Alegre, RS</span>
           </div>
 

@@ -113,14 +113,14 @@
     },
     {
       "coffeId": 3,
-      "quantity": 12,
+      "quantity": 0,
       "price": 9.9,
       "title": "Expresso Cremoso",
       "id": 2
     },
     {
       "coffeId": 7,
-      "quantity": 1,
+      "quantity": 2,
       "price": 9.9,
       "title": "Havaiano",
       "id": 3

@@ -28,7 +28,7 @@ export const InforHeader = styled.div`
 
     span {
       color: ${(props) => props.theme['purple-dark']};
-      font-weight: 400;
+      font-weight: 700;
     }
 
 
