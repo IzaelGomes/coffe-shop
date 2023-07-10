@@ -3,10 +3,14 @@ import { styled } from "styled-components";
 
 
 
-export const ItemWrapper = styled.div`
-     display: flex;
-    align-items: center;
-    padding-bottom: 1rem;
+export const Wrapper = styled.div`
+  
+
+    .item-Wrapper{
+        display: flex;
+        align-items: center;
+        padding-bottom: 1rem;
+    }
 
     .cart-infor{
         display: flex;
@@ -16,6 +20,8 @@ export const ItemWrapper = styled.div`
         img{
             width: 4rem;
         }
+
+
 
         .price{
             padding-top: 0.8rem;
@@ -40,6 +46,7 @@ export const ItemWrapper = styled.div`
     display: flex;
     align-items: center;
     gap: 0.4rem;
+
     .buttonControls{
         background-color: ${(props) => props.theme['base-button']};
         width: 3rem;
@@ -59,6 +66,7 @@ export const ItemWrapper = styled.div`
         height: 2rem;
         color:${(props) => props.theme['purple-dark']};
         background-color: ${(props) => props.theme['base-button']};
+       
         }
     }
 
@@ -74,9 +82,15 @@ export const ItemWrapper = styled.div`
         span{
             padding-top: 0.1rem;
             color: ${(props) => props.theme["base-text"]};
+            text-transform: uppercase;
+            font-size: 0.75rem;
         }
     }
 } 
+
+hr{
+    border-top: 1px solid ${props => props.theme["base-button"]};
+}
 
 `
 

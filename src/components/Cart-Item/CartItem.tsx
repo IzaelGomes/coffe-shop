@@ -1,28 +1,74 @@
-import { Trash } from "@phosphor-icons/react"
-import coffe from "../../assets/cofee.svg"
-import { ItemWrapper } from './style'
+import { Trash } from "@phosphor-icons/react";
+import coffe from "../../assets/coffe.svg";
+import { Wrapper } from "./style";
+import axios from "axios";
+import {useContext, useState } from "react";
+import { CartContext } from "../../contexts/cartContext";
 
-const CartItem = () => {
-  return (
-    <ItemWrapper>
-    <div className='cart-infor'>
-        <img src={coffe} alt="" />
-        <div className='item-infor'>
-            <h3>Expresso Tradicional</h3>
-            <div className='buttons'>
-              <div className='buttonControls'>
-                  <button>-</button>
-                  <span>2</span>
-                  <button>+</button>  
-              </div>
-              <button className='remove-item-button'><Trash size={20} fill='#8047F8'/> <span>Remover</span></button>
-            </div> 
-           
-        </div>
-        <span className='price'>R$ 9,90</span>
-    </div>
-  </ItemWrapper>
-  )
+interface ICartItemProps {
+  title: string;
+  quantity: number;
+  price: number;
+  id: number;
 }
 
-export {CartItem}
+const CartItem = ({ title, quantity, price, id }: ICartItemProps) => {
+  const totalPrice = price * quantity;
+  const [quantityCoffeUpdated, setQuantityCoffeUpdated] = useState(0);
+  const {addMoreCoffe, removerCoffe} = useContext(CartContext)
+
+  async function addMoreCoffeonCart(id: number) {
+
+    const coffe = await axios.get(`http://localhost:3000/coffeCart/${id}`);
+
+    const coffeQuantityUpdated = coffe.data.quantity + 1;
+    setQuantityCoffeUpdated(coffeQuantityUpdated);
+
+    await axios.patch(`http://localhost:3000/coffeCart/${id}`, {
+      quantity: coffeQuantityUpdated,
+    });
+
+    return;
+  }
+
+  async function removerCoffeOnCart(id: number) {
+    const coffe = await axios.get(`http://localhost:3000/coffeCart/${id}`);
+
+    const coffeQuantityUpdated = coffe.data.quantity - 1;
+    setQuantityCoffeUpdated(coffeQuantityUpdated);
+
+    await axios.patch(`http://localhost:3000/coffeCart/${id}`, {
+      quantity: quantityCoffeUpdated,
+    });
+    return;
+  }
+
+
+
+  return (
+    <Wrapper>
+      <div className="item-Wrapper">
+        <div className="cart-infor">
+          <img src={coffe} alt="" />
+          <div className="item-infor">
+            <h3>{title}</h3>
+            <div className="buttons">
+              <div className="buttonControls">
+                <button onClick={() => removerCoffe(id, "coffeCart")}>-</button>
+                <span>{quantity}</span>
+                <button onClick={() => addMoreCoffe(id, "coffeCart")}>+</button>
+              </div>
+              <button className="remove-item-button">
+                <Trash size={20} fill="#8047F8" /> <span>Remover</span>
+              </button>
+            </div>
+          </div>
+          <span className="price">R$ {totalPrice.toFixed(2)}</span>
+        </div>
+      </div>
+      <hr></hr>
+    </Wrapper>
+  );
+};
+
+export { CartItem };

@@ -1,9 +1,143 @@
 {
   "coffe": [
-    { "id": 1, "title": "jExpresso Tradicional", "description": "O tradicional café feito com água quente e grãos moídos" },
-    { "id": 1, "title": "jExpresso Tradicional", "description": "O tradicional café feito com água quente e grãos moídos" }
+    {
+      "id": 1,
+      "img": "cofee.svg",
+      "title": "jExpresso Tradicional",
+      "description": "O tradicional café feito com água quente e grãos moídos",
+      "type": [
+        {
+          "id": 1,
+          "name": "Tradicional"
+        }
+      ],
+      "quantity": 2,
+      "price": 9.9
+    },
+    {
+      "id": 2,
+      "img": "cofee_3.svg",
+      "title": "Expresso Americano",
+      "description": "Expresso diluído, menos intenso que o tradicional",
+      "type": [
+        {
+          "id": 1,
+          "name": "Tradicional"
+        }
+      ],
+      "quantity": 1,
+      "price": 9.9
+    },
+    {
+      "id": 3,
+      "img": "cofee_3.svg",
+      "title": "Expresso Cremoso",
+      "description": "Café expresso tradicional com espuma cremosa",
+      "type": [
+        {
+          "id": 1,
+          "name": "Tradicional"
+        }
+      ],
+      "quantity": 0,
+      "price": 9.9
+    },
+    {
+      "id": 4,
+      "img": "cofee_4.svg",
+      "title": "Expresso Gelado",
+      "description": "Bebida preparada com café expresso e cubos de gelo",
+      "type": [
+        {
+          "id": 1,
+          "name": "Tradicional"
+        },
+        {
+          "id": 1,
+          "name": "com leite"
+        }
+      ],
+      "quantity": 0,
+      "price": 9.9
+    },
+    {
+      "id": 5,
+      "img": "cofee_2.svg",
+      "title": "Macchiato",
+      "description": "Bebida preparada com café expresso e cubos de gelo",
+      "type": [
+        {
+          "id": 1,
+          "name": "Tradicional"
+        }
+      ],
+      "quantity": 0,
+      "price": 9.9
+    },
+    {
+      "id": 6,
+      "img": "cofee.svg",
+      "title": "Cubano",
+      "description": "Bebida preparada com café expresso e cubos de gelo",
+      "type": [
+        {
+          "id": 1,
+          "name": "Tradicional"
+        }
+      ],
+      "quantity": 0,
+      "price": 9.9
+    },
+    {
+      "id": 7,
+      "img": "cofee_3.svg",
+      "title": "Havaiano",
+      "description": "Bebida preparada com café expresso e cubos de gelo",
+      "type": [
+        {
+          "id": 1,
+          "name": "Tradicional"
+        }
+      ],
+      "quantity": 0,
+      "price": 9.9
+    }
   ],
-  "types": [
-    { "id": 1, "title": "Tradicional", "coffeId": 1 }
+  "coffeCart": [
+    {
+      "coffeId": 2,
+      "quantity": 1,
+      "price": 9.9,
+      "title": "Expresso Americano",
+      "id": 1
+    },
+    {
+      "coffeId": 3,
+      "quantity": 12,
+      "price": 9.9,
+      "title": "Expresso Cremoso",
+      "id": 2
+    },
+    {
+      "coffeId": 7,
+      "quantity": 1,
+      "price": 9.9,
+      "title": "Havaiano",
+      "id": 3
+    },
+    {
+      "coffeId": 5,
+      "quantity": 4,
+      "price": 9.9,
+      "title": "Macchiato",
+      "id": 4
+    },
+    {
+      "coffeId": 4,
+      "quantity": 0,
+      "price": 9.9,
+      "title": "Expresso Gelado",
+      "id": 5
+    }
   ]
 }

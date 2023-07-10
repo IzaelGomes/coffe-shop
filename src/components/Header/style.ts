@@ -30,6 +30,8 @@ export const InforHeader = styled.div`
       color: ${(props) => props.theme['purple-dark']};
       font-weight: 400;
     }
+
+
   }
 `
 

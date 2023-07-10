@@ -67,6 +67,11 @@ export const FormTitle = styled.div`
     }
 `
 
+export const PaymentTypes = styled.div`
+    display: flex;
+    gap: 0.75rem;
+`
+
 export const Title = styled.div`
     display: flex;
     align-items: center;
@@ -90,12 +95,52 @@ export const Cart = styled.div`
         padding: 2.2rem;
         border-radius: 6px;
         border-radius: 6px 36px 6px 36px;
+        display: flex;
+        flex-direction: column;
     }
 
+    .order-prices{
+        display: flex;
+        margin-top: 1.5rem;
+        flex-direction: column;
+        gap: 0.75rem;
 
+        div{
+            display: flex;
+            justify-content: space-between;
+
+            .total-items-text, .total-items-price, .shipping-tax, .shipping-tax-price {
+                color: ${props => props.theme["base-text"]};
+                font-family: "Roboto", sans-serif;
+            }
+
+            .total-items-text, .shipping-tax{
+                font-size: 0.875rem;
+            }
+
+            .shipping-tax-price, .total-items-price{
+                font-size: 1rem;
+            }
+
+            .total, .total-price{
+                font-family: "Roboto", sans-serif;
+                color: ${props => props.theme["base-subtile"]};
+                font-weight: 700;
+                font-size: 1.25rem;
+            }
+
+        }
+    }
 `
 
-export const PaymentTypes = styled.div`
-    display: flex;
-    gap: 0.75rem;
+export const ButtonConfirm= styled.button`
+    background-color: ${props => props.theme.yellow};
+    margin-top: 1.5rem;
+    color: #fff;
+    font-weight: 700;
+    padding: 0.75rem 0.5rem;
+    border-radius: 6px;
+    border: none;
+    text-transform: uppercase;
 `
+
